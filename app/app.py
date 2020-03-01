@@ -1,10 +1,6 @@
-from flask import Flask, request
-from flask_restful import Api
+import falcon
+from app.resources.image_resource import ImageResource
 
-from app.resources import ImageResource
+api = application = falcon.API()
 
-app = Flask(__name__)
-api = Api(app)
-
-api.add_resource(ImageResource, '/')
-
+api.add_route('/', ImageResource())
