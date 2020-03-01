@@ -13,7 +13,7 @@ class ImageController:
             msg = 'Image type not allowed. Must be PNG, JPEG, JPG, or GIF'
             raise falcon.HTTPBadRequest('Bad request', msg)
 
-    def get_image_size(self, image_stream, content_type):
+    def get_image_size(self, image_stream):
         image_bytes = []
         while True:
             chunk = image_stream.read(self._CHUNK_SIZE_BYTES)

@@ -12,7 +12,7 @@ class ImageResource:
     @falcon.before(ImageController().validate_image_type)
     def on_post(self, req: Request, resp: Response, *args, **kwargs):
         try:
-            response = ImageController().get_image_size(req.stream, req.content_type)
+            response = ImageController().get_image_size(req.stream)
             resp.media = response
             resp.status = falcon.HTTP_200
         except Exception as ex:
