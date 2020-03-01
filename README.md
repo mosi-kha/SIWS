@@ -1,7 +1,9 @@
 # Simple Image Web Server
 This a simple REST API Image Web Server
 
-you send an Image and response is size of the Image.
+you send an Image and response is JSON format that contain of the image's size.
+### API
+`localhost:8000/ GET POST`
 
 ###Step #1
 please download or clone this project in your directory `git clone`
