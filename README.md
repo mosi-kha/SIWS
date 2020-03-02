@@ -8,7 +8,7 @@ you send an Image and response is JSON format that contain of the image's size.
 ### Request Format
 send direct file with correct **content-type** e.g.
 
-    curl -X POST -d @image.giflocalhost:8000 -H "Content-Type:image/gif"
+    curl -X POST -d @image.gif localhost:8000 -H "Content-Type:image/gif"
 
 ### Response Format
     {
