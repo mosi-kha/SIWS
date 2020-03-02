@@ -1,4 +1,5 @@
 import requests
+import os
 
 from PIL import Image
 from random import randint
@@ -57,3 +58,7 @@ class TestAPI:
         assert resp['width'] == image.width
         assert resp['height'] == image.height
         assert resp['format'] == 'JPEG'
+
+    @classmethod
+    def teardown_class(cls):
+        os.remove('image')
