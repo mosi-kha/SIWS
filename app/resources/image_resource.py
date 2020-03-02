@@ -16,4 +16,4 @@ class ImageResource:
             resp.media = response
             resp.status = falcon.HTTP_200
         except Exception as ex:
-            raise falcon.HTTPBadRequest('bad request', ex.__str__())
+            raise falcon.HTTPBadRequest("bad request", ex.__str__())
