@@ -8,7 +8,7 @@ you send an Image and response is JSON format that contain of the image's size.
 ### Request Format
 send direct file with correct **content-type** e.g.
 
-    curl -X POST -d @image.gif localhost:8000 -H "Content-Type:image/gif"
+    curl --data-binary @image.gif localhost:8000 -H "Content-Type:image/gif"
 
 ### Response Format
     {
@@ -18,6 +18,7 @@ send direct file with correct **content-type** e.g.
         "doc": pixel
     }
 
+### Run
 #### Step #1
 please download or clone this project in your directory `git clone`
 
@@ -41,3 +42,6 @@ to run this web-service just type `python main.py`
 
 ### Test
 first run app then `pytest test`
+
+### Run With Docker
+you can build and run with `Dockerfile`
